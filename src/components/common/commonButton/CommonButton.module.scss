@@ -1,0 +1,49 @@
+// $button-size: (
+//   'x-large': 52px,
+//   'large': 44px,
+//   'default': 36px,
+//   'small': 28px,
+//   'x-small': 20px
+// );
+
+// .common-btn {
+//   display: inline-block;
+//   padding: 0 20px;
+//   height: 36px;
+//   line-height: 36px;
+//   border-radius: 4px;
+//   text-align: center;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+
+//   &__primary {
+//     background-color: $color-primary-500;
+//     color: $color-white-100;
+//     font-weight: 700;
+//     font-size: 1.4rem;
+//     border: none;
+
+//     &:hover {
+//       background-color: $color-primary-400;
+//     }
+
+//     &:active {
+//       background-color: $color-primary-600;
+//     }
+
+//     &__disabled {
+//       background-color: $color-primary-100;
+//       cursor: not-allowed;
+//     }
+//   }
+
+//   @each $name, $size in $button-size {
+//     &__size__#{$name} {
+//       height: $size;
+//     }
+//   }
+// }
+
+// .block {
+//   width: 100% !important;
+// }
