@@ -1,18 +1,18 @@
-import styles from './CommonButton.module.scss'
+import styles from './CommonButton.module.scss';
 
 type CommonButtonName = 'primary' | 'secondly' | 'stress' | 'normal';
-type CommonSize = "x-large" | "large" | "default" | "small" | "x-small"
+type CommonSize = 'x-large' | 'large' | 'default' | 'small' | 'x-small';
 
 interface CommonButtonProps {
-  name?: CommonButtonName
-  block?: boolean
-  disabled?: boolean
-  border?: string | number | boolean
-  size?: CommonSize
-  width?: string | number
-  maxWidth?: string | number
-  children: React.ReactNode
-  onClick?: () => void
+  name?: CommonButtonName;
+  block?: boolean;
+  disabled?: boolean;
+  border?: string | number | boolean;
+  size?: CommonSize;
+  width?: string | number;
+  maxWidth?: string | number;
+  children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const CommonButton = ({
@@ -38,7 +38,9 @@ const CommonButton = ({
     buttonDisabledClass,
     buttonBlockClass,
     buttonSizeClass,
-  ].join(' ').trim();
+  ]
+    .join(' ')
+    .trim();
 
   return (
     <button
@@ -49,7 +51,7 @@ const CommonButton = ({
     >
       {children}
     </button>
-  )
+  );
 };
 
 export default CommonButton;

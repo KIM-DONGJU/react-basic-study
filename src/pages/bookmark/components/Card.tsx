@@ -9,10 +9,7 @@ export default function Card({ card }: CardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.card__imageBox}>
-        <img
-          className={styles.card__imageBox__image}
-          src={card.urls.small}
-        />
+        <img className={styles.card__imageBox__image} src={card.urls.small} />
       </div>
       <div className={styles.card__infoBox}>
         <div className={styles.card__infoBox__row}>
@@ -21,7 +18,9 @@ export default function Card({ card }: CardProps) {
         </div>
         <div className={styles.card__infoBox__row}>
           <span className={styles.label}>이미지 크기</span>
-          <span className={styles.value}>{card.width} X {card.height}</span>
+          <span className={styles.value}>
+            {card.width} X {card.height}
+          </span>
         </div>
         <div className={styles.card__infoBox__row}>
           <span className={styles.label}>업로드 날짜</span>
@@ -37,5 +36,5 @@ export default function Card({ card }: CardProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

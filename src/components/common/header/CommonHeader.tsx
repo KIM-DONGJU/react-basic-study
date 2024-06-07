@@ -9,33 +9,24 @@ export default function CommonHeader() {
 
   return (
     <header className={styles.header}>
-      <div
-        className={styles.header__logoBox}
-        onClick={() => moveToPage('/')}
-      >
+      <div className={styles.header__logoBox} onClick={() => moveToPage('/')}>
         <img
           className={styles.header__logoBox__logo}
           src="src/assets/images/image-logo.png"
           alt=""
         />
-        <span className={styles.header__logoBox__title}>
-          PhotoSplash
-        </span>
+        <span className={styles.header__logoBox__title}>PhotoSplash</span>
       </div>
       <div className={styles.header__profileBox}>
-        <button className={styles.header__profileBox__button}>
-          사진제출
-        </button>
+        <button className={styles.header__profileBox__button}>사진제출</button>
         <button
           className={styles.header__profileBox__button}
           onClick={() => moveToPage('/bookmark')}
         >
           북마크
         </button>
-        <span className={styles.header__profileBox__userName}>
-          kdj0689@gmail.com
-        </span>
+        <span className={styles.header__profileBox__userName}>kdj0689@gmail.com</span>
       </div>
     </header>
-  )
+  );
 }

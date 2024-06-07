@@ -37,27 +37,15 @@ export default function CommonNav() {
   }, [location.pathname]);
 
   const navLinks = navigation.map((item: Navigation) => {
-    const linkClass = (
-      item.isActive ?
-        `${styles.navigation__menu} ${styles.active}` :
-        `${styles.navigation__menu} ${styles.inactive}`
-    )
+    const linkClass = item.isActive
+      ? `${styles.navigation__menu} ${styles.active}`
+      : `${styles.navigation__menu} ${styles.inactive}`;
     return (
-      <Link
-        to={item.path}
-        key={item.path}
-        className={linkClass}
-      >
-        <span>
-          {item.label}
-        </span>
+      <Link to={item.path} key={item.path} className={linkClass}>
+        <span>{item.label}</span>
       </Link>
-    )
+    );
   });
 
-  return (
-    <nav className={styles.navigation}>
-      {navLinks}
-    </nav>
-  )
+  return <nav className={styles.navigation}>{navLinks}</nav>;
 }

@@ -29,11 +29,8 @@ export default function CommonSearchBar() {
           placeholder="찾으실 이미지를 검색하세요."
           onChange={onChange}
         />
-        <img
-          src="src/assets/icons/icon-search.svg"
-          alt="search icon"
-        />
+        <img src="src/assets/icons/icon-search.svg" alt="search icon" />
       </div>
     </div>
-  )
+  );
 }

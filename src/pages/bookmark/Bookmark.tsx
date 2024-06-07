@@ -16,14 +16,9 @@ export default function Bookmark() {
       <CommonHeader />
       <main className={styles.page__contents}>
         {Object.values(bookmarkList).map((card) => {
-          return (
-          <Card
-            key={card.id}
-            card={card}
-          />
-          )
+          return <Card key={card.id} card={card} />;
         })}
       </main>
     </div>
-  )
+  );
 }
