@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilValue } from 'recoil';
 
 import { bookmarkListState } from '@/store/atoms/bookmarkState';
 
@@ -8,7 +7,7 @@ import styles from './Bookmark.module.scss';
 import Card from './components/Card';
 
 export default function Bookmark() {
-  const [bookmarkList, setBookmarkList] = useRecoilState(bookmarkListState);
+  const bookmarkList = useRecoilValue(bookmarkListState);
 
   return (
     <div className={styles.page}>

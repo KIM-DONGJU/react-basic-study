@@ -23,7 +23,7 @@ export default function DetailDialog({ data, handelDialog }: DetailDialogProps) 
   const [bookmarkList, setBookmarkList] = useRecoilState(bookmarkListState);
   const isBookmark = !!bookmarkList[data.id];
 
-  const addBookmark = (selected: CardDTO) => {
+  const selectBookmark = (selected: CardDTO) => {
     if (!isBookmark) {
       setBookmarkList({ ...bookmarkList, [selected.id]: selected });
       toast('해당 이미지를 북마크에 저장하였습니다.');
@@ -53,11 +53,16 @@ export default function DetailDialog({ data, handelDialog }: DetailDialogProps) 
             <span className={styles.close__authorName}>{data.user.name}</span>
           </div>
           <div className={styles.bookmark}>
-            <button className={styles.bookmark__button} onClick={() => addBookmark(data)}>
+            <button
+              className={styles.bookmark__button}
+              onClick={() => selectBookmark(data)}
+              data-testid="bookmark-button"
+            >
               {/* 구글 아이콘 사용 예정 */}
               <span
                 className="material-symbols-outlined"
                 style={{ fontSize: '16px', color: isBookmark ? 'red' : '' }}
+                data-testid="bookmark-icon"
               >
                 favorite
               </span>
